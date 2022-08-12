@@ -1,0 +1,126 @@
+body {
+  font-family: SFDistantGalaxy;
+  background-image: url(https://w0.peakpx.com/wallpaper/829/149/HD-wallpaper-stars-black-dark-night.jpg);
+}
+
+/*------------------------------------------*/
+@font-face {
+  font-family: SFDistantGalaxy;
+  src: url(./asset/SFDistantGalaxy.ttf);
+}
+
+/*------------------------------------------*/
+header {
+  display: flex;
+  flex-wrap: wrap;
+  height: 400px;
+  background-image: url(https://www.mundopeliculas.tv/wp-content/uploads/2020/11/star-wars-cronologico-1024x436.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+/*----------------------------------*/
+.movies_container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin-left: 70px;
+  margin-top: 50px;
+}
+.card {
+  display: flex;
+  position: relative;
+  width: 500px;
+  height: 600px;
+}
+
+.card:hover .face-front {
+  transform: perspective(600px) rotateY(180deg);
+}
+
+.card:hover .face-back {
+  transform: perspective(600px) rotateY(360deg);
+}
+
+.face-back {
+  display: flex;
+  position: absolute;
+  width: 70%;
+  height: 70%;
+  align-items: center;
+  justify-content: center;
+  backface-visibility: hidden;
+  border-radius: 10px;
+  overflow: hidden;
+  transition: 1s;
+  font-size: 12px;
+}
+
+.face-front {
+  display: flex;
+  position: absolute;
+  width: 80%;
+  height: 80%;
+  align-items: center;
+  justify-content: center;
+  backface-visibility: hidden;
+  border-radius: 10px;
+  overflow: hidden;
+  transition: 1s;
+}
+
+.face-front {
+  transform: perspective(600px) rotate(0deg);
+}
+
+.face-front img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.face-front h3 h4 {
+  width: 100%;
+  height: 45px;
+  line-height: 45px;
+  color: #ffff00;
+  position: absolute;
+  bottom: 0%;
+  text-align: center;
+}
+
+.face-back {
+  transform: perspective(600px) rotate(0deg);
+  box-shadow: o 5px 10px black;
+  background-color: black;
+  padding: 15px;
+  color: #ffff00;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  text-align: center;
+  letter-spacing: 2px;
+}
+
+.link {
+  border-top: solid 1px #ffff00;
+  height: 50px;
+  line-height: 50px;
+}
+
+.link a {
+  color: #ffff00;
+}
+
+/*----------------------------------*/
+
+@media only screen and (max-width: 770px) {
+  header {
+  }
+}
+
+@media only screen and (max-width: 550px) {
+  header {
+    display: none;
+  }
+}
